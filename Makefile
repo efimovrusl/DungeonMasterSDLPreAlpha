@@ -1,7 +1,7 @@
 all: game
 
 game:
-	clang -std=c11 -Wall -pedantic src/*.c -I resource/SDL/include -L resource/SDL/lib -l SDL2-2.0.0 -l SDL2_Mixer-2.0.0 -o endgame
+	clang -std=c11 -Wall -pedantic src/*.c -I resource/SDL -L resource/SDL/lib -lSDL2 -lSDL2_mixer -o endgame
 
 inst: install_lib
 

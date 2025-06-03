@@ -1,10 +1,5 @@
 #pragma once
 
-static const int SCREEN_WIDTH = 2560;
-static const int SCREEN_HEIGHT = 1350;
-
-static const float METER = (float)SCREEN_HEIGHT / 7;
-
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
 #include <stdbool.h>
@@ -13,6 +8,11 @@ static const float METER = (float)SCREEN_HEIGHT / 7;
 
 #include "struct.h"
 #include "stack.h"
+
+static const int SCREEN_WIDTH = 2560;
+static const int SCREEN_HEIGHT = 1350;
+
+static const float METER = (float)SCREEN_HEIGHT / 7;
 
 void processControl(SDL_Event *e, Control *KeyBoard1, Mix_Chunk* walkSound);
 void processMovement(Animated_Entity *entity, Control *keyboard, float *coords, unsigned int *collision, Mix_Chunk *ahSound);

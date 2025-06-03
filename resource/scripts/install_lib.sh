@@ -1,4 +1,8 @@
-cp -aRv /Users/$USER/.brew/Cellar/sdl2/2.0.12_1/include resource/SDL/
-cp -aRv /Users/$USER/.brew/Cellar/sdl2/2.0.12_1/lib/ resource/SDL/lib/
-cp -aRv /Users/$USER/.brew/Cellar/sdl2_mixer/2.0.4/include resource/SDL/
-cp -aRv /Users/$USER/.brew/Cellar/sdl2_mixer/2.0.4/lib/ resource/SDL/lib/
+SDL2_PATH=$(brew --prefix sdl2)
+SDL2_MIXER_PATH=$(brew --prefix sdl2_mixer)
+
+# Copy libraries using dynamic paths
+cp -aRv "$SDL2_PATH/include/" resource/SDL/
+cp -aRv "$SDL2_PATH/lib/" resource/SDL/lib/
+cp -aRv "$SDL2_MIXER_PATH/include/" resource/SDL/
+cp -aRv "$SDL2_MIXER_PATH/lib/" resource/SDL/lib/
